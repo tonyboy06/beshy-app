@@ -8,6 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600&family=Lora&family=Oxygen:wght@300;400;700&family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
     <div class="container">
@@ -15,12 +20,16 @@
         <div class="title-div">
             <h2 class="title">Beshy App</h2>
         </div>
-        <textarea name="textarea" id="textarea-el" cols="35" rows="8">Nothing in here yet...</textarea>
-        <button id="copy-el">COPY</button>
+        
     </div>
     <div class="show-container">
         <p id="result-el"></p>
     </div>
+    <div class="input">
+        <textarea name="textarea" id="textarea-el" cols="35" rows="3"></textarea>
+        <button id="copy-el">COPY<i class="fa-regular fa-copy"></i></button>
+    </div>
+    
 
     <script type="module" src="main.js"></script>
 </body>

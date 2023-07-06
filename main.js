@@ -2,13 +2,13 @@ const inputEl = document.getElementById('textarea-el')
 const copyBtn = document.getElementById('copy-el')
 const resultEl = document.getElementById('result-el')
 
-
+resultEl.textContent = ' 🤸 '
 inputEl.addEventListener('input', function() {
-    addEmoji()
-})
-
-inputEl.addEventListener('click', function() {
-    inputEl.value = ''
+    if (inputEl.value) {
+        addEmoji()
+    } else {
+        resultEl.textContent = ''
+    }
 })
 
 copyBtn.addEventListener('click', function() {
@@ -33,13 +33,18 @@ function copy() {
 
 function addEmoji() {
     let input = inputEl.value
-    let words = input.split(" ")
-    let result = ' '
+    let words = input.trim()
+    let result = ''
 
-    for (let i = 0; i < words.length; i++) {
-        result += words[i] + " 🤸 "
+    if (words.length > 0) {
+        let replacedValue = words.replace(/\s+/g, " ")
+        let newValue = replacedValue.replace(/\s+/g, " 🤸 ")
+        result = newValue
+    } else {
+        resultEl.textContent = words
     }
-    resultEl.textContent = result.trimEnd()
+    
+    resultEl.textContent = result
 }
 
 
