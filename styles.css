@@ -28,7 +28,7 @@ body {
 @media only screen and (max-width: 426px) {
     .container {
         max-width: 100%;
-        height: 280px;
+        height: 270px;
     }
 
     .container img {
